@@ -1,0 +1,10 @@
+name = "Git_jll"
+uuid = "f8c6e375-362e-5223-8a59-34ff63f689eb"
+version = "2.23.0+0"
+
+[deps]
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+
+[compat]
+julia = "1.3"

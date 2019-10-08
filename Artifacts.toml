@@ -1,0 +1,8 @@
+[[Git]]
+arch = "i686"
+git-tree-sha1 = "682b57bfc6b32066d58009a78a02c3263f993af3"
+os = "windows"
+
+    [[Git.download]]
+    sha256 = "9c85515690867047a57dd365e4a1ef9776036a01d1781a37d282acf9d5676bf8"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.23.0+0/Git.v2.23.0.i686-w64-mingw32.tar.gz"
