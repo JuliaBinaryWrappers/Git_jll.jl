@@ -25,14 +25,14 @@ function git(f::Function; adjust_PATH::Bool = true, adjust_LIBPATH::Bool = true)
     env_mapping = Dict{String,String}()
     if adjust_PATH
         if !isempty(get(ENV, "PATH", ""))
-            env_mapping["PATH"] = string(ENV["PATH"], ':', PATH)
+            env_mapping["PATH"] = string(PATH, ':', ENV["PATH"])
         else
             env_mapping["PATH"] = PATH
         end
     end
     if adjust_LIBPATH
         if !isempty(get(ENV, LIBPATH_env, ""))
-            env_mapping[LIBPATH_env] = string(ENV[LIBPATH_env], ':', LIBPATH)
+            env_mapping[LIBPATH_env] = string(LIBPATH, ':', ENV[LIBPATH_env])
         else
             env_mapping[LIBPATH_env] = LIBPATH
         end
@@ -47,14 +47,18 @@ end
 Open all libraries
 """
 function __init__()
-    global prefix = abspath(joinpath(@__DIR__, ".."))
+    global artifact_dir = abspath(artifact"Git")
 
     # Initialize PATH and LIBPATH environment variable listings
     global PATH_list, LIBPATH_list
-    append!.(Ref(PATH_list), (LibCURL_jll.PATH_list, Expat_jll.PATH_list, OpenSSL_jll.PATH_list, Gettext_jll.PATH_list, Libiconv_jll.PATH_list, PCRE2_jll.PATH_list, Zlib_jll.PATH_list,))
-    append!.(Ref(LIBPATH_list), (LibCURL_jll.LIBPATH_list, Expat_jll.LIBPATH_list, OpenSSL_jll.LIBPATH_list, Gettext_jll.LIBPATH_list, Libiconv_jll.LIBPATH_list, PCRE2_jll.LIBPATH_list, Zlib_jll.LIBPATH_list,))
+    # We first need to add to LIBPATH_list the libraries provided by Julia
+    append!(LIBPATH_list, [joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)])
+    # From the list of our dependencies, generate a tuple of all the PATH and LIBPATH lists,
+    # then append them to our own.
+    foreach(p -> append!(PATH_list, p), (LibCURL_jll.PATH_list, Expat_jll.PATH_list, OpenSSL_jll.PATH_list, Gettext_jll.PATH_list, Libiconv_jll.PATH_list, PCRE2_jll.PATH_list, Zlib_jll.PATH_list,))
+    foreach(p -> append!(LIBPATH_list, p), (LibCURL_jll.LIBPATH_list, Expat_jll.LIBPATH_list, OpenSSL_jll.LIBPATH_list, Gettext_jll.LIBPATH_list, Libiconv_jll.LIBPATH_list, PCRE2_jll.LIBPATH_list, Zlib_jll.LIBPATH_list,))
 
-    global git_path = abspath(joinpath(artifact"Git", git_splitpath...))
+    global git_path = normpath(joinpath(artifact_dir, git_splitpath...))
 
     push!(PATH_list, dirname(git_path))
     # Filter out duplicate and empty entries in our PATH and LIBPATH entries
