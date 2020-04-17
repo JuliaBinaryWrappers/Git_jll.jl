@@ -1,6 +1,6 @@
 name = "Git_jll"
 uuid = "f8c6e375-362e-5223-8a59-34ff63f689eb"
-version = "2.23.0+1"
+version = "2.26.1+0"
 
 [deps]
 Gettext_jll = "78b55507-aeef-58d4-861c-77aaff3498b1"
