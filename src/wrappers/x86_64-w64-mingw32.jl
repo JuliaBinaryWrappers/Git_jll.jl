@@ -12,6 +12,7 @@ using Zlib_jll
 PATH = ""
 LIBPATH = ""
 LIBPATH_env = "PATH"
+LIBPATH_default = ""
 
 # Relative path to `git`
 const git_splitpath = ["bin", "git.exe"]
@@ -31,8 +32,9 @@ function git(f::Function; adjust_PATH::Bool = true, adjust_LIBPATH::Bool = true)
         end
     end
     if adjust_LIBPATH
-        if !isempty(get(ENV, LIBPATH_env, ""))
-            env_mapping[LIBPATH_env] = string(LIBPATH, ';', ENV[LIBPATH_env])
+        LIBPATH_base = get(ENV, LIBPATH_env, expanduser(LIBPATH_default))
+        if !isempty(LIBPATH_base)
+            env_mapping[LIBPATH_env] = string(LIBPATH, ';', LIBPATH_base)
         else
             env_mapping[LIBPATH_env] = LIBPATH
         end
@@ -51,13 +53,13 @@ function __init__()
 
     # Initialize PATH and LIBPATH environment variable listings
     global PATH_list, LIBPATH_list
-    # We first need to add to LIBPATH_list the libraries provided by Julia
-    append!(LIBPATH_list, [Sys.BINDIR, joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)])
     # From the list of our dependencies, generate a tuple of all the PATH and LIBPATH lists,
     # then append them to our own.
     foreach(p -> append!(PATH_list, p), (LibCURL_jll.PATH_list, Expat_jll.PATH_list, OpenSSL_jll.PATH_list, Gettext_jll.PATH_list, Libiconv_jll.PATH_list, PCRE2_jll.PATH_list, Zlib_jll.PATH_list,))
     foreach(p -> append!(LIBPATH_list, p), (LibCURL_jll.LIBPATH_list, Expat_jll.LIBPATH_list, OpenSSL_jll.LIBPATH_list, Gettext_jll.LIBPATH_list, Libiconv_jll.LIBPATH_list, PCRE2_jll.LIBPATH_list, Zlib_jll.LIBPATH_list,))
 
+    # Lastly, we need to add to LIBPATH_list the libraries provided by Julia
+    append!(LIBPATH_list, [Sys.BINDIR, joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)])
     global git_path = normpath(joinpath(artifact_dir, git_splitpath...))
 
     push!(PATH_list, dirname(git_path))
