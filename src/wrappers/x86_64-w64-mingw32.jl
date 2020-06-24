@@ -58,8 +58,6 @@ function __init__()
     foreach(p -> append!(PATH_list, p), (LibCURL_jll.PATH_list, Expat_jll.PATH_list, OpenSSL_jll.PATH_list, Gettext_jll.PATH_list, Libiconv_jll.PATH_list, PCRE2_jll.PATH_list, Zlib_jll.PATH_list,))
     foreach(p -> append!(LIBPATH_list, p), (LibCURL_jll.LIBPATH_list, Expat_jll.LIBPATH_list, OpenSSL_jll.LIBPATH_list, Gettext_jll.LIBPATH_list, Libiconv_jll.LIBPATH_list, PCRE2_jll.LIBPATH_list, Zlib_jll.LIBPATH_list,))
 
-    # Lastly, we need to add to LIBPATH_list the libraries provided by Julia
-    append!(LIBPATH_list, [Sys.BINDIR, joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)])
     global git_path = normpath(joinpath(artifact_dir, git_splitpath...))
 
     push!(PATH_list, dirname(git_path))
@@ -67,12 +65,5 @@ function __init__()
     filter!(!isempty, unique!(PATH_list))
     filter!(!isempty, unique!(LIBPATH_list))
     global PATH = join(PATH_list, ';')
-    global LIBPATH = join(LIBPATH_list, ';')
-
-    # Add each element of LIBPATH to our DL_LOAD_PATH (necessary on platforms
-    # that don't honor our "already opened" trick)
-    #for lp in LIBPATH_list
-    #    push!(DL_LOAD_PATH, lp)
-    #end
-end  # __init__()
+    global LIBPATH = join(vcat(LIBPATH_list, [Sys.BINDIR, joinpath(Sys.BINDIR, Base.LIBDIR, "julia"), joinpath(Sys.BINDIR, Base.LIBDIR)]), ';'))            end  # __init__()
 
