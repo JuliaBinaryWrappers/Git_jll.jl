@@ -1,115 +1,143 @@
 [[Git]]
 arch = "aarch64"
-git-tree-sha1 = "c1eb40de96ccdac3577056e283d1251b5166eed6"
-libc = "glibc"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "e51931240b3890a5271bc926f85acd9a872b67a1c7d6bc9f46a7e827062ef24a"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.aarch64-linux-gnu.tar.gz"
-[[Git]]
-arch = "aarch64"
-git-tree-sha1 = "62a77fdb7b0e8443a957b1d1f544f0f422016207"
-libc = "musl"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "db72467c11215cd5fd1d9296896a0975a158e56f76599d7f395b5d3399649803"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.aarch64-linux-musl.tar.gz"
-[[Git]]
-arch = "armv7l"
-call_abi = "eabihf"
-git-tree-sha1 = "feea4ade040235d87f97d74064f2c5c3d8b26ce6"
-libc = "glibc"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "ebbd15814b979d0019a74d785260a65a299b966deb753dbf1a2f186917503526"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.armv7l-linux-gnueabihf.tar.gz"
-[[Git]]
-arch = "armv7l"
-call_abi = "eabihf"
-git-tree-sha1 = "36f7ad13c6ab67143ccf0fa499df7a6677b64318"
-libc = "musl"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "9a3a6a5c490b1c4d9b0561566ce06ca6258a50871c7b72a43ea46fbca17d5650"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.armv7l-linux-musleabihf.tar.gz"
-[[Git]]
-arch = "i686"
-git-tree-sha1 = "60309956e0d7b19d40170f1fdd2c74285734a2cb"
-libc = "glibc"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "000486ee1ce736f79460e54dccb4d4a148ef56a7ebe89e4a9d4c42b198fc7b44"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.i686-linux-gnu.tar.gz"
-[[Git]]
-arch = "i686"
-git-tree-sha1 = "5c91834eb3f6b56d4152b08888cc40888c914b81"
-libc = "musl"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "d47bcbc3f817a4227eef4c689feae4f65cd7763ab054b89193b2aac7cef1aa11"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.i686-linux-musl.tar.gz"
-[[Git]]
-arch = "i686"
-git-tree-sha1 = "30e34f256cb8b745d3f8864a774641e9b5197f96"
-os = "windows"
-
-    [[Git.download]]
-    sha256 = "88e7d2491d956aeaa61f9f3ddcdcbc1e74594544036c7ff8240aff34a0c70f89"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.i686-w64-mingw32.tar.gz"
-[[Git]]
-arch = "powerpc64le"
-git-tree-sha1 = "11f130ef0086a65cbb47b747df780f0f5f14b3bb"
-libc = "glibc"
-os = "linux"
-
-    [[Git.download]]
-    sha256 = "9521c9e0dc9ecb2ed88d9fcb3db56aaea87ec9eacc9968e47c26f70d9b3b1a34"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.powerpc64le-linux-gnu.tar.gz"
-[[Git]]
-arch = "x86_64"
-git-tree-sha1 = "554453215888cc66406fca3bc8a2285995626b67"
+git-tree-sha1 = "89bfa9c5b6f794dc6e2c2ba80026dacf3d4eb6c5"
 os = "macos"
 
     [[Git.download]]
-    sha256 = "f06a54f9d5044a7af0bc86808d5b2abd9198d79147e7897b4513ac28c2f49968"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.x86_64-apple-darwin.tar.gz"
+    sha256 = "b9f5ecb033b1992ec725f85fffd15ef4cfabd0fc21aa0d0a12f9097431ce2f61"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.aarch64-apple-darwin.tar.gz"
 [[Git]]
-arch = "x86_64"
-git-tree-sha1 = "43eef4d016f011145955de2ba33450dda0536252"
+arch = "aarch64"
+git-tree-sha1 = "2d1307c2deeb928f72b9b8ccacb27b02ab47707a"
 libc = "glibc"
 os = "linux"
 
     [[Git.download]]
-    sha256 = "2afaae05b351df2b87dec75bb52439f3763394c6c1d4f17302dd7c7b9527f803"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.x86_64-linux-gnu.tar.gz"
+    sha256 = "1784f6051a4e7155a9eaf4bc789c03bbb7d64bedd5fb803b5df00a0ace610496"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.aarch64-linux-gnu.tar.gz"
 [[Git]]
-arch = "x86_64"
-git-tree-sha1 = "02ed816190ec9c057ea5d4a2f6c44e614aac5ba5"
+arch = "aarch64"
+git-tree-sha1 = "693b2f0e86f8a90926360054b835b0b4436cad25"
 libc = "musl"
 os = "linux"
 
     [[Git.download]]
-    sha256 = "8f643c0b4e8d343c8398b23ce7f845c78b4ea827129b351f0cf29fe632802cb4"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.x86_64-linux-musl.tar.gz"
+    sha256 = "d139e422c8872ec3a7e4ef34a8c9f41ff42521d5449645256705b5f63d5f0100"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.aarch64-linux-musl.tar.gz"
 [[Git]]
-arch = "x86_64"
-git-tree-sha1 = "ec12af51a7d841498ee1e2d945c19867bc1c1f85"
-os = "freebsd"
+arch = "armv6l"
+call_abi = "eabihf"
+git-tree-sha1 = "9b94296a10d14305ef69dbc711003bb89a8c6a8f"
+libc = "glibc"
+os = "linux"
 
     [[Git.download]]
-    sha256 = "9091d0b82912a2feba5d90bd9f3a6929992b2391a55e6f8d50957eb19e39f725"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.x86_64-unknown-freebsd.tar.gz"
+    sha256 = "f8834f0e6f1e8c61826fc001098db888227be342303d8f5f99a88e1ae1cd2a50"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.armv6l-linux-gnueabihf.tar.gz"
 [[Git]]
-arch = "x86_64"
-git-tree-sha1 = "619286221242e01dff2c14682413d1877810aa8e"
+arch = "armv6l"
+call_abi = "eabihf"
+git-tree-sha1 = "25e7fbb68be2b5e230deaf5959c6c4d000a7a937"
+libc = "musl"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "2727414917ec5e7c00d2209efd0ee25f7c228e71f4630befedb90aeecf9e2725"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.armv6l-linux-musleabihf.tar.gz"
+[[Git]]
+arch = "armv7l"
+call_abi = "eabihf"
+git-tree-sha1 = "a0b216fc27c9d27c7318a39aa3b0fb83009a97b7"
+libc = "glibc"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "b4d45c711c945943da71c134adff83e90e7a15da6afae1c6c86afab1f13fe380"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.armv7l-linux-gnueabihf.tar.gz"
+[[Git]]
+arch = "armv7l"
+call_abi = "eabihf"
+git-tree-sha1 = "1bd950035666d0be0a9b972d23863a7b48febe49"
+libc = "musl"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "fbf2f33bac49e3d0decf097ba6c0ef86f9d618074fa5d5615499fab0f50ab5c7"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.armv7l-linux-musleabihf.tar.gz"
+[[Git]]
+arch = "i686"
+git-tree-sha1 = "30c02475ffaa0492a9bb2c05edb072b2c433c84d"
+libc = "glibc"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "7e5a92e2d2e079e184fce6cad27be69b8a6c17dde9b1807427fd89b529347c08"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.i686-linux-gnu.tar.gz"
+[[Git]]
+arch = "i686"
+git-tree-sha1 = "79c93e5bbab3c74589d4b94bf2a0ea0d89d7ad43"
+libc = "musl"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "b9f60a0d1a660190d2ae6f4d76cd2b593ba0b257717a118b78b6b588cef4aa60"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.i686-linux-musl.tar.gz"
+[[Git]]
+arch = "i686"
+git-tree-sha1 = "c035098a127ef75523b67d0977b6205d7dd4add0"
 os = "windows"
 
     [[Git.download]]
-    sha256 = "3929468566d8f226307e235ec1cb4e95b6f399e6266bb04c8639667e9f7c5af7"
-    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.31.0+0/Git.v2.31.0.x86_64-w64-mingw32.tar.gz"
+    sha256 = "7b085e65d81b892154e0bc0157f2cee1528a447558e801ca5876f512b7bb9c27"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.i686-w64-mingw32.tar.gz"
+[[Git]]
+arch = "powerpc64le"
+git-tree-sha1 = "21fd2750e6917feadb1162e7117be8f13cf3f755"
+libc = "glibc"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "f760a3170e0789c14fa7d6700f124768c43c15189da09f89c4cc4f786e8856dc"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.powerpc64le-linux-gnu.tar.gz"
+[[Git]]
+arch = "x86_64"
+git-tree-sha1 = "fc4adbf1d7551761c1693502d0b221eb0f780b59"
+os = "macos"
+
+    [[Git.download]]
+    sha256 = "9b77c8b4baf93865b90844a6d0b99721dddd9fa92045e283d95dd52429cccafd"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.x86_64-apple-darwin.tar.gz"
+[[Git]]
+arch = "x86_64"
+git-tree-sha1 = "33c5e3a13ad6427f86436f577c0edce1e468ac80"
+libc = "glibc"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "7ab651b3200f4a9b842ed66942dfd93d0296497b2fa8136b29e2a4010cfb6092"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.x86_64-linux-gnu.tar.gz"
+[[Git]]
+arch = "x86_64"
+git-tree-sha1 = "2080a937e2c9a3daae54ec8192559b3336acea52"
+libc = "musl"
+os = "linux"
+
+    [[Git.download]]
+    sha256 = "09e9d518e6f05ad683c13d5f9e8ff2821cbbed8a5646167bf1d010ddd4bb9603"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.x86_64-linux-musl.tar.gz"
+[[Git]]
+arch = "x86_64"
+git-tree-sha1 = "7c16e239db5639767eacf8e204c435a7a32689ae"
+os = "freebsd"
+
+    [[Git.download]]
+    sha256 = "57f47134de8e6adc7f75e9fbb088bb14558255fe99ba39bae2bbdcb7b8f8eb7a"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.x86_64-unknown-freebsd.tar.gz"
+[[Git]]
+arch = "x86_64"
+git-tree-sha1 = "b1c30e410f4f10e6305f3d06fa11f3137ff506c3"
+os = "windows"
+
+    [[Git.download]]
+    sha256 = "d782db7244c578e5c3a2cb3b9b84a52640120278753abe3bb01a29be4d28764f"
+    url = "https://github.com/JuliaBinaryWrappers/Git_jll.jl/releases/download/Git-v2.34.1+0/Git.v2.34.1.x86_64-w64-mingw32.tar.gz"
