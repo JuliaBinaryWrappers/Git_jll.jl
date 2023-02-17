@@ -4,14 +4,13 @@ export git
 using LibCURL_jll
 using Expat_jll
 using OpenSSL_jll
-using Gettext_jll
 using Libiconv_jll
 using PCRE2_jll
 using Zlib_jll
 JLLWrappers.@generate_wrapper_header("Git")
 JLLWrappers.@declare_executable_product(git)
 function __init__()
-    JLLWrappers.@generate_init_header(LibCURL_jll, Expat_jll, OpenSSL_jll, Gettext_jll, Libiconv_jll, PCRE2_jll, Zlib_jll)
+    JLLWrappers.@generate_init_header(LibCURL_jll, Expat_jll, OpenSSL_jll, Libiconv_jll, PCRE2_jll, Zlib_jll)
     JLLWrappers.@init_executable_product(
         git,
         "bin\\git.exe",
