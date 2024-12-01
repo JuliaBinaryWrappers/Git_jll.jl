@@ -1,6 +1,6 @@
 name = "Git_jll"
 uuid = "f8c6e375-362e-5223-8a59-34ff63f689eb"
-version = "2.46.2+0"
+version = "2.47.1+0"
 
 [deps]
 JLLWrappers = "692b3bcd-3c85-4b1f-b108-f13ce0eb3210"
@@ -17,8 +17,7 @@ Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 JLLWrappers = "1.2.0"
 julia = "1.6"
 LibCURL_jll = "7.73.0,8"
-OpenSSL_jll = "3.0.8"
-PCRE2_jll = "10.35.0"
+OpenSSL_jll = "3.0.15"
 Libdl = "< 0.0.1, 1"
-Expat_jll = "2.2.10"
+Expat_jll = "2.6.4"
 Artifacts = "< 0.0.1, 1"
